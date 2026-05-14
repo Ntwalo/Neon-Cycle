@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Neon Cycle — bicycle sales and repair shop in Cape Town. Shop bikes, book repairs, and contact us." />
+  <title>Neon Cycle — Home</title>
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+
+  <header class="site-header container" role="banner">
+    <div class="header-inner">
+      <a class="logo" href="Home.html" aria-label="Neon Cycle home">
+        <img src="images/logo.jpg" alt="Neon Cycle logo" class="logo-img" />
+      </a>
+
+      <nav class="main-nav" role="navigation" aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="Home.html" aria-current="page">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Product.html">Products</a></li>
+          <li><a href="Enquiry.html">Enquiry</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container" role="main">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-text">
+        <h1 id="hero-heading">Welcome to Neon Cycle</h1>
+        <p class="lead">Your trusted bicycle shop in Cape Town.</p>
+      </div>
+
+      <div class="hero-cta">
+        <a class="btn" href="Product.html">Shop Bikes</a>
+        <a class="btn ghost" href="Enquiry.html">Book a Repair</a>
+      </div>
+    </section>
+
+    <section class="featured" aria-labelledby="featured-heading">
+      <h2 id="featured-heading">Featured Bikes</h2>
+
+      <div class="cards">
+        <article class="product-card" aria-labelledby="p1">
+          <div class="media">
+            <img loading="lazy"
+                 src="images/mountain-bike.jpg"
+                 srcset="images/mountain-bike.jpg 400w, images/mountain-bike.jpg 800w"
+                 sizes="(max-width:700px) 100vw, 33vw"
+                 alt="Mountain bike — rugged frame with suspension" />
+          </div>
+          <h3 id="p1">Mountain Bike</h3>
+          <p class="desc">Strong and reliable for all terrains.</p>
+          <p class="price">Price: R5000</p>
+          <div class="actions">
+            <a class="btn" href="enquiry.html?product=Mountain%20Bike">Enquire</a>
+          </div>
+        </article>
+
+        <article class="product-card" aria-labelledby="p2">
+          <div class="media">
+            <img loading="lazy"
+                 src="images/city-bike.jpg"
+                 srcset="images/city-bike.jpg 400w, images/city-bike.jpg 800w"
+                 sizes="(max-width:700px) 100vw, 33vw"
+                 alt="City bike — comfortable commuter bike" />
+          </div>
+          <h3 id="p2">City Bike</h3>
+          <p class="desc">Perfect for daily commuting.</p>
+          <p class="price">Price: R3500</p>
+          <div class="actions">
+            <a class="btn" href="enquiry.html?product=City%20Bike">Enquire</a>
+          </div>
+        </article>
+
+        <article class="product-card" aria-labelledby="p3">
+          <div class="media">
+            <img loading="lazy"
+                 src="images/ebike.jpg"
+                 srcset="images/ebike.jpg 400w, images/ebike.jpg 800w"
+                 sizes="(max-width:700px) 100vw, 33vw"
+                 alt="Electric bike — assisted pedalling e-bike" />
+          </div>
+          <h3 id="p3">Electric Bike</h3>
+          <p class="desc">Eco-friendly and effortless riding.</p>
+          <p class="price">Price: Contact for pricing</p>
+          <div class="actions">
+            <a class="btn" href="enquiry.html?product=Electric%20Bike">Enquire</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container" role="contentinfo">
+    <p>&copy; ST10472961 Neon Cycle</p>
+  </footer>
+
+</body>
+</html>

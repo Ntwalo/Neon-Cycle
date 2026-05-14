@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Neon Cycle product catalogue — commuter, mountain and electric bikes with prices and enquiry links.">
+  <title>Neon Cycle — Products</title>
+  <link rel="stylesheet" href="css/products.css">
+</head>
+<body>
+
+
+  <header class="site-header container" role="banner">
+    <div class="header-inner">
+      <a class="logo" href="Home.html" aria-label="Neon Cycle home">
+        <img src="images/logo.jpg" alt="Neon Cycle logo" />
+      </a>
+
+      <nav class="main-nav" role="navigation" aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Product.html" aria-current="page">Products</a></li>
+          <li><a href="Enquiry.html">Enquiry</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container" role="main">
+    <section class="product-hero" aria-labelledby="products-heading">
+      <div>
+        <div class="breadcrumb" aria-hidden="true">Home › Products</div>
+        <div class="page-title">
+          <h1 id="products-heading">Our Bikes</h1>
+          <div class="meta">Browse our selection and click Enquire to request pricing or book a test ride</div>
+        </div>
+      </div>
+
+      <div class="header-controls" role="region" aria-label="Product controls">
+        <div class="search-row">
+          <input id="productSearch" type="search" placeholder="Search bikes, e.g., commuter" aria-label="Search products">
+          <button id="searchBtn" type="button" class="btn">Search</button>
+        </div>
+
+        <div class="filter-row" aria-hidden="false">
+          <label for="categorySelect" class="visually-hidden">Filter by category</label>
+          <select id="categorySelect" name="category">
+            <option value="">All categories</option>
+            <option value="commuter">Commuter</option>
+            <option value="mountain">Mountain</option>
+            <option value="electric">Electric</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-grid" aria-labelledby="products-heading" id="productGrid">
+      <article class="product-card" data-category="commuter">
+        <div class="media">
+          <img src="images/city-bike.jpg"
+               srcset="images/city-bike.jpg 400w, images/city-bike.jpg 800w, images/city-bike.jpg 1200w"
+               sizes="(max-width:700px) 100vw, (max-width:1100px) 50vw, 33vw"
+               alt="Commuter bike — black frame with basket">
+        </div>
+        <h3>Commuter Bike</h3>
+        <p class="desc">Lightweight frame, comfortable upright geometry for city riding.</p>
+        <p class="price">Price: R3500</p>
+        <div class="actions">
+          <a class="btn" href="enquiry.html?product=Commuter%20Bike">Enquire Now</a>
+          <a class="btn ghost" href="Product.html">View Details</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="mountain">
+        <div class="media">
+          <img src="images/mountain-bike.jpg"
+               srcset="images/mountain-bike.jpg 400w, images/mountain-bike.jpg 800w, images/mountain-bike.jpg 1200w"
+               sizes="(max-width:700px) 100vw, (max-width:1100px) 50vw, 33vw"
+               alt="Mountain bike — rugged frame with suspension"/>
+        </div>
+        <h3>Mountain Bike</h3>
+        <p class="desc">Durable frame and suspension for off-road trails.</p>
+        <p class="price">Price: R5000</p>
+        <div class="actions">
+          <a class="btn" href="enquiry.html?product=Mountain%20Bike">Enquire Now</a>
+          <a class="btn ghost" href="Product.html">View Details</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="electric">
+        <div class="media">
+          <img src="images/ebike.jpg"
+               srcset="images/ebike.jpg 400w, images/ebike.jpg 800w, images/ebike.jpg 1200w"
+               sizes="(max-width:700px) 100vw, (max-width:1100px) 50vw, 33vw"
+               alt="Electric bike — modern e-bike with battery">
+        </div>
+        <h3>Electric Bike</h3>
+        <p class="desc">Assisted pedalling for longer commutes and easier hills.</p>
+        <p class="price">Price: Contact for pricing</p>
+        <div class="actions">
+          <a class="btn" href="enquiry.html?product=Electric%20Bike">Enquire Now</a>
+          <a class="btn ghost" href="Product.html">View Details</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="empty-state visually-hidden" id="noResults" aria-live="polite">
+      No products match your search.
+    </section>
+  </main>
+
+  <footer class="site-footer container" role="contentinfo">
+    <p>&copy; ST10472961 Neon Cycle</p>
+  </footer>
+
+</body>
+</html>

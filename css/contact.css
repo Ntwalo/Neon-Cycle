@@ -1,0 +1,84 @@
+/* css/contact.css
+   Neon Cycle Contact page styles
+   Mobile-first, responsive, accessible
+*/
+
+:root{
+  --primary:#0A2F44;
+  --accent:#E5FF00;
+  --bg:#F4F4F4;
+  --card:#FFFFFF;
+  --text:#222222;
+  --muted:#6b6b6b;
+  --radius:8px;
+  --max-width:1100px;
+  --ff-head:"Poppins",sans-serif;
+  --ff-body:"Open Sans",sans-serif;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--ff-body);
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding:1rem;
+}
+
+.container{max-width:var(--max-width);margin:0 auto;padding:0 1rem}
+
+/* Skip link */
+.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{left:1rem;top:1rem;width:auto;height:auto;padding:.5rem .75rem;background:#fff;border-radius:6px;z-index:1000}
+
+/* Header */
+.site-header{background:linear-gradient(180deg, rgba(10,47,68,0.03), transparent);border-radius:var(--radius);padding:.6rem;margin-bottom:1rem;box-shadow:0 6px 18px rgba(10,47,68,0.06)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo img{width:110px;height:auto;border-radius:6px}
+.nav-links{list-style:none;margin:0;padding:0;display:flex;gap:.5rem}
+.nav-links a{display:inline-block;padding:.4rem .6rem;border-radius:6px;color:var(--primary);text-decoration:none;font-weight:600}
+.nav-links a:hover,.nav-links a[aria-current="page"]{background:var(--accent);color:#000}
+
+/* Hero */
+.contact-hero{background:var(--card);padding:1rem;border-radius:var(--radius);box-shadow:0 6px 18px rgba(10,47,68,0.06);margin-bottom:1rem}
+.contact-hero h1{font-family:var(--ff-head);margin:0;color:var(--primary);font-size:1.6rem}
+.lead{color:var(--muted);margin-top:.5rem}
+
+/* Form */
+.custom-form{background:var(--card);padding:1rem;border-radius:var(--radius);box-shadow:0 6px 18px rgba(10,47,68,0.04)}
+.form-row{display:flex;flex-direction:column;margin-bottom:.75rem}
+label{font-weight:700;color:var(--primary);margin-bottom:.35rem}
+input,select,textarea{padding:.6rem;border:1px solid #e6e6e6;border-radius:6px;font-size:1rem;background:#fff}
+input:focus,select:focus,textarea:focus{outline:3px solid rgba(10,47,68,0.08);border-color:var(--primary)}
+small{color:var(--muted)}
+.required{color:#c0392b;margin-left:.25rem}
+
+/* Buttons */
+.btn{background:var(--primary);color:#fff;padding:.6rem .9rem;border-radius:6px;border:none;cursor:pointer;font-weight:700}
+.btn.ghost{background:transparent;color:var(--primary);border:2px solid var(--primary)}
+
+/* Layout helpers */
+.custom-form.full-width{width:100%}
+.custom-form .full{grid-column:1/-1}
+
+/* Status */
+.form-status{padding:.6rem;border-radius:6px;margin-top:.5rem;display:block}
+
+/* Footer */
+.site-footer{text-align:center;color:var(--muted);margin-top:1rem;padding:.5rem}
+
+/* Responsive */
+@media(min-width:700px){
+  .custom-form{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+  .custom-form .full{grid-column:1/-1}
+  .header-inner{align-items:center}
+  .logo img{width:120px}
+}
+@media(min-width:1100px){
+  .container{max-width:var(--max-width)}
+  .contact-hero h1{font-size:2rem}
+}

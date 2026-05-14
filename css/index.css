@@ -1,0 +1,204 @@
+/* css/index.css - Neon Cycle Home page (fit-to-screen, no JS) */
+
+:root{
+  --primary:#0A2F44;
+  --accent:#E5FF00;
+  --bg:#F4F4F4;
+  --card:#FFFFFF;
+  --muted:#6b6b6b;
+  --text:#222222;
+  --radius:8px;
+  --max-width:1100px;
+  --ff-head:"Poppins",sans-serif;
+  --ff-body:"Open Sans",sans-serif;
+  --shadow:0 6px 18px rgba(10,47,68,0.06);
+}
+
+/* Reset */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--ff-body);
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.45;
+  padding:0;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+/* Container keeps content centered and prevents horizontal overflow */
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:1rem;
+  width:100%;
+  box-sizing:border-box;
+}
+
+/* Header */
+.site-header{
+  background:linear-gradient(180deg, rgba(10,47,68,0.03), transparent);
+  border-radius:0 0 var(--radius) var(--radius);
+  padding:.5rem 1rem;
+  margin:0;
+  box-shadow:var(--shadow);
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+}
+.logo-img{
+  width:84px;                /* compact logo */
+  height:auto;
+  display:block;
+  border-radius:6px;
+  object-fit:contain;
+}
+.nav-links{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  gap:.5rem;
+  align-items:center;
+  flex-wrap:wrap;
+}
+.nav-links a{
+  display:inline-block;
+  padding:.35rem .6rem;
+  border-radius:6px;
+  color:var(--primary);
+  text-decoration:none;
+  font-weight:600;
+  font-size:0.95rem;
+}
+.nav-links a:hover,
+.nav-links a[aria-current="page"]{
+  background:var(--accent);
+  color:#000;
+}
+
+/* Ensure images are visible and responsive */
+.media img,
+.logo-img {
+  display:block;
+  max-width:100%;
+  width:100%;
+  height:auto;
+  object-fit:cover;
+  visibility:visible;
+  opacity:1;
+}
+
+/* Main layout: allow main to grow and keep footer at bottom */
+main{flex:1;overflow:hidden}
+
+/* Hero */
+.hero{
+  background:var(--card);
+  padding:1rem;
+  border-radius:8px;
+  box-shadow:var(--shadow);
+  display:flex;
+  flex-direction:column;
+  gap:.75rem;
+  align-items:flex-start;
+  margin:1rem;
+}
+.hero-text{max-width:60ch}
+.hero h1{
+  font-family:var(--ff-head);
+  font-size:1.5rem;
+  margin:0;
+  color:var(--primary);
+}
+.lead{color:var(--muted);margin:0.25rem 0 0.75rem 0}
+.hero-cta{display:flex;gap:0.5rem;flex-wrap:wrap}
+.btn{
+  display:inline-block;
+  background:var(--primary);
+  color:#fff;
+  padding:0.5rem .85rem;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:700;
+}
+.btn.ghost{background:transparent;color:var(--primary);border:2px solid var(--primary)}
+
+/* Featured cards */
+.featured{margin:0 1rem 1rem 1rem}
+.featured h2{font-family:var(--ff-head);color:var(--primary);margin:0 0 .5rem 0}
+.cards{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1rem;
+}
+.product-card{
+  background:var(--card);
+  padding:.9rem;
+  border-radius:8px;
+  box-shadow:var(--shadow);
+  display:flex;
+  flex-direction:column;
+  gap:.5rem;
+  min-height:300px;
+  overflow:hidden;
+}
+.media{
+  width:100%;
+  height:150px;              /* constrained height to avoid pushing content */
+  overflow:hidden;
+  border-radius:8px;
+  background:#f6f6f6;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.media img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;          /* crop to fit without stretching */
+}
+.product-card h3{margin:0;font-family:var(--ff-head);color:var(--primary);font-size:1.05rem}
+.product-card p{margin:0;color:var(--muted)}
+.price{color:var(--primary);font-weight:700}
+.actions{margin-top:auto;display:flex;gap:.5rem;align-items:center}
+
+/* Footer */
+.site-footer{
+  text-align:center;
+  color:var(--muted);
+  padding:1rem;
+  background:transparent;
+}
+
+/* Focus states */
+a:focus,button:focus,input:focus,select:focus,textarea:focus{
+  outline:3px solid rgba(10,47,68,0.12);
+  outline-offset:2px;
+}
+
+/* Responsive adjustments */
+@media(min-width:700px){
+  .hero{flex-direction:row;align-items:center;justify-content:space-between;padding:1.25rem;margin:1.25rem}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .media{height:200px}
+  .logo-img{width:96px}
+  .container{padding:1.25rem}
+}
+@media(min-width:1100px){
+  .cards{grid-template-columns:repeat(3,1fr)}
+  .media{height:220px}
+  .hero h1{font-size:2rem}
+  .logo-img{width:120px}
+  .container{padding:1.5rem}
+}
+
+/* Prevent horizontal overflow on small screens */
+html,body,main,header,footer{max-width:100%;overflow-x:hidden}

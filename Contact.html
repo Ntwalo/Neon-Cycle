@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Contact Neon Cycle — book repairs, ask about products, or find our Woodstock location.">
+  <title>Neon Cycle — Contact</title>
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header role="banner" class="site-header container">
+    <div class="header-inner">
+      <a class="logo" href="Home.html" aria-label="Neon Cycle home">
+        <img src="images/logo.jpg" alt="Neon Cycle logo — stylised neon bicycle">
+      </a>
+
+      <nav role="navigation" aria-label="Primary" class="main-nav">
+        <ul class="nav-links">
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Product.html">Products</a></li>
+          <li><a href="Enquiry.html">Enquiry</a></li>
+          <li><a href="Contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" role="main" class="container">
+    <section class="contact-hero content-section" aria-labelledby="contact-heading">
+      <h1 id="contact-heading">Contact Us</h1>
+      <p class="lead">Woodstock, Cape Town — <a href="tel:+27797649920">079 764 9920</a>. Use the form below to book a repair or send an enquiry.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Book a Repair or Send an Enquiry</h2>
+
+      <form id="contactForm" class="custom-form" novalidate>
+        <div class="form-row">
+          <label for="name">Name <span class="required" aria-hidden="true">*</span></label>
+          <input id="name" name="name" type="text" required minlength="2" placeholder="Enter your full name">
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email <span class="required" aria-hidden="true">*</span></label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com">
+        </div>
+
+        <div class="form-row">
+          <label for="date">Preferred Date</label>
+          <input id="date" name="date" type="date" placeholder="yyyy-mm-dd">
+        </div>
+
+        <div class="form-row">
+          <label for="phone">Phone number <span class="required" aria-hidden="true">*</span></label>
+          <input id="phone" name="phone" type="tel" required pattern="^\d{10}$" placeholder="0797649920" aria-describedby="phoneHelp">
+          <small id="phoneHelp">Enter 10 digits, e.g., 0797649920</small>
+        </div>
+
+        <div class="form-row">
+          <label for="contactMethod">Preferred contact method</label>
+          <select id="contactMethod" name="contactMethod">
+            <option value="">-- Please choose an option --</option>
+            <option value="email">Email</option>
+            <option value="phone">Phone call</option>
+            <option value="whatsapp">WhatsApp</option>
+          </select>
+        </div>
+
+        <div class="form-row full">
+          <label for="message">Service required and details</label>
+          <textarea id="message" name="message" rows="6" placeholder="Describe the service you need"></textarea>
+        </div>
+
+        <div class="form-row full actions">
+          <button type="submit" class="btn">Book Now</button>
+          <button type="reset" class="btn ghost">Reset</button>
+        </div>
+
+        <div id="formStatus" role="status" aria-live="polite" class="form-status" hidden></div>
+      </form>
+    </section>
+  </main>
+
+  <footer role="contentinfo" class="site-footer container">
+    <p>&copy; ST10472961 Neon Cycle</p>
+  </footer>
+
+</body>
+</html>
